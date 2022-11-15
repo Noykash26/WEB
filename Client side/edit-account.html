@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Account</title>
+    <link rel="stylesheet" href="css/header.css"><!-- header styles -->
+    <link rel="stylesheet" href="css/footer.css"><!-- footer styles -->
+    <link rel="stylesheet" href="css/style.css"><!-- page styles -->
+    <link rel="stylesheet" href="css/form.css"><!-- form styles -->
+    <script src="js/header.js"></script> <!-- call to js file -->
+    <script src="https://kit.fontawesome.com/61f659ea71.js" crossorigin="anonymous"></script> <!-- icon cdn -->
+</head>
+<body>
+      <header>
+        <nav>
+            <div class="topnav" id="myTopnav">
+              <div class="logo"><a href="index.html">Trom<span>Oti</span></a></div>
+                <a href="contact.html">ContactUs</a>
+                <a href="my-account.html" class="active">My Account</a>
+                <a href="#SignUp" onclick="openModal()">SignUp</a>
+                <a href="about.html" >About</a>
+                <a href="index.html">Home</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="page">
+            <h1>Edit Your Account</h1>
+        </div>       
+        <div class="form-wrap">
+            <div class="form-html">    
+              <div class="form-form">
+                  <form action="/todo" method="post">
+                    <div class="group">
+                      <label for="user_signup" class="label">Username</label>
+                      <input id="user_signup" name="user_signup" type="text" class="input" required value="username">
+                      <span id = "username_mes" class="messages"></span> 
+                    </div>
+                    <div class="group">
+                      <label for="Email" class="label">Email Address</label>
+                      <input id="Email" name="Email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="input" required value="example@example.com">
+                      <span id = "email_mes" class="messages"></span> 
+                    </div>
+                    <div class="group">
+                      <label for="phone" class="label">Phone Number</label>
+                      <input id="phone" name="phone" type="tel" pattern="[0][5][0-9]{1}[0-9]{3}[0-9]{4}" class="input" required value="0500000000"> 
+                      <span id = "phone_mes" class="messages" ></span> 
+                    </div> 
+                    <div class="group">
+                      <label for="password_signup" class="label">Password</label>
+                      <input id="password_signup" name="password" type="password" minlength="8" maxlength="15" class="input" required value="********">
+                      <div class="eye_icon"><i class="fas fa-eye" id="togglePassword" style="margin-left: 350px; margin-bottom: 0px; cursor: pointer;"></i></div>
+                    </div>
+                    <div class="group">
+                      <span id = "password_mes" class="messages"></span> 
+                      <label for="repass_signup" class="label">Confirm Password</label>
+                      <input id="repass_signup" name="repass_signup" type="password" minlength="8" maxlength="15"  class="input" required value="********">
+                      <span id = "repass_mes" class="messages"> </span> 
+                    </div>
+                    <div class="group">
+                      <input type="submit" class="button" value="Update" style= "color: white; font-weight: bold; font-size: 15px;" onclick="return varify_signup()">
+                    </div>
+                  </form>
+                </div>
+              </div>
+          </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="logo">Trom<span>Oti</span></div>
+            <p>
+                TromOti is an app that serves as a dedicated platform for donations to the needy. The app serves as an interface
+                Which connects the various associations or individuals and the donating business owners, in a simple and effective way so
+                Minimal effort will be required from donors. 
+            </p>
+        </div>
+        <div class="footer-bottom">
+            <p>copyright &copy; <a href="#">TromOti</a>  </p>
+            <div class="footer-menu">
+                <ul class="f-menu">
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="#SignUp">SignUp</a></li>
+                    <li><a href="my-account.html">My Account</a></li>
+                    <li><a href="contact.html">ContactUs</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+<script src="js/signin.js"></script> <!--link to the js file-->
